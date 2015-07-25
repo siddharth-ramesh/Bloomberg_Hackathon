@@ -86,3 +86,7 @@ def clear_ask(ticker):
 def close_connection():
     run(login_user,login_pass,"CLOSE_CONNECTION")
     print("The connection was closed gracefully")
+
+def start_parsing():
+    allSecurities = str( securities() )
+
