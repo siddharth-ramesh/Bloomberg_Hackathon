@@ -1,4 +1,4 @@
-class Stock:
+class Stock():
 
     earnings = 0.0
     num_of_shares = 0
