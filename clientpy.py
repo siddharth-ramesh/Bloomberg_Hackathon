@@ -41,26 +41,48 @@ def subscribe(user, password):
 #OURCODE STARTS HERE:
 #this is our username and password
 login_user,login_pass = "Here_for_Beer","johnsmith"
+
 #runs any input, this is a placeholder for quick functions
 def runthis(input):
    return run(login_user,login_pass,input)
 
-#returns how much cash we have
+#1 returns how much cash we have
 def cash():
     return  run(login_user,login_pass,"MY_CASH")
 
-#return our shares
+#2 return our shares
 def our_shares():
     return  run(login_user,login_pass,"MY_SECURITIES")
 
-#BID <ticker> <price> <shares>
+#3 our current sell and buy orders with number of shares and price per
+def orders():
+    return  run(login_user,login_pass,"MY_ORDERS")
+
+#4 Out all securities on exchange
+def securities():
+    return  run(login_user,login_pass,"SECURITIES")
+
+#5 list all orders on exchange for a ticker
+def orders(ticker):
+    return  run(login_user,login_pass,"ORDERS "+str(ticker))
+
+#6 BID <ticker> <price> <shares>
 def buy(ticker,price,shares):
    return run(login_user,login_pass,"BID "+str(ticker)+" "+ str(price)+" "+str(shares))
 
-#ASK <ticker> <price> <shares>
+#7 ASK <ticker> <price> <shares>
 def sell(ticker,price,shares):
    return run(login_user,login_pass,"ASK "+str(ticker)+" "+ str(price)+" "+str(shares))
 
+#8 clears your bid(buy)
+def clear_bid(ticker):
+    return run(login_user,login_pass,"CLEAR_BID "+str(ticker))
 
+#9 clears your ask(sell)
+def clear_ask(ticker):
+    return run(login_user,login_pass,"CLEAR_ASK "+str(ticker))
 
-#testywesty
+#10 close the connection "gracefully"
+def close_connection():
+    run(login_user,login_pass,"CLOSE_CONNECTION")
+    print("The connection was closed gracefully")
