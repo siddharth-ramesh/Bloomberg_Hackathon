@@ -48,3 +48,5 @@ def buy(ticker,price,shares):
 #ASK <ticker> <price> <shares>
 def sell(ticker,price,shares):
    return run("Here_for_Beer","johnsmith","ASK "+str(ticker)+" "+ str(price)+" "+str(shares))
+
+#testywesty
