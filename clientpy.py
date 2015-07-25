@@ -1,5 +1,8 @@
 import socket
 import sys
+from Stock import *
+
+stockList = []
 
 def run(user, password, *commands):
     global line
@@ -92,8 +95,14 @@ def close_connection():
     run(login_user,login_pass,"CLOSE_CONNECTION")
     print("The connection was closed gracefully")
 
+
 def start_parsing():
     allSecurities = str( securities() )
+    listOfSecurities = allSecurities.split(" ")
+    x = Stock()
+    print x.earnings
+    stockList.append()
+
 
 lines = securities()
 print(lines)
