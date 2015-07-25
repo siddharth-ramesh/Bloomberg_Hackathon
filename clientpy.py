@@ -38,7 +38,7 @@ def subscribe(user, password):
         sock.close()
 
 
-#OURCODE STARTS HERE:
+#OURCODE STARTS
 #this is our username and password
 login_user,login_pass = "Here_for_Beer","johnsmith"
 
