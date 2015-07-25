@@ -37,16 +37,30 @@ def subscribe(user, password):
     finally:
         sock.close()
 
+
+#OURCODE STARTS HERE:
+#this is our username and password
+login_user,login_pass = "Here_for_Beer","johnsmith"
 #runs any input, this is a placeholder for quick functions
 def runthis(input):
-   return run("Here_for_Beer","johnsmith",input)
+   return run(login_user,login_pass,input)
+
+#returns how much cash we have
+def cash():
+    return  run(login_user,login_pass,"MY_CASH")
+
+#return our shares
+def our_shares():
+    return  run(login_user,login_pass,"MY_SECURITIES")
 
 #BID <ticker> <price> <shares>
 def buy(ticker,price,shares):
-   return run("Here_for_Beer","johnsmith","BID "+str(ticker)+" "+ str(price)+" "+str(shares))
+   return run(login_user,login_pass,"BID "+str(ticker)+" "+ str(price)+" "+str(shares))
 
 #ASK <ticker> <price> <shares>
 def sell(ticker,price,shares):
-   return run("Here_for_Beer","johnsmith","ASK "+str(ticker)+" "+ str(price)+" "+str(shares))
+   return run(login_user,login_pass,"ASK "+str(ticker)+" "+ str(price)+" "+str(shares))
+
+
 
 #testywesty
